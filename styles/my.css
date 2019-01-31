@@ -20,3 +20,53 @@ ul, li {
         padding: 0;
         margin: 0;
 }
+/* change nav background color */
+.navbar {
+        background-color: #062c33;
+}
+/* change the link color */
+.navbar .navbar-nav .nav-link {
+        color: lightyellow;
+}
+/* change the color of active or hovered links */
+.nav-item.active .nav-link,
+.nav-item:focus .nav-link,
+.nav-item:hover .nav-link {
+        color: yellow;
+}
+
+/* my header style */
+.header{
+        background-image: url("../assets/img/img_header.png");
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+}
+/* text on header */
+.overlay{
+        position: absolute;
+        min-height: 100%;
+        min-width: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(244,244,244,0.60);
+}
+
+.description{
+        font-size: 24px;
+        text-align: justify;
+        text-shadow: 1px 1px lightgray;
+        width: 900px;
+        height: auto;
+        padding: 1em;
+        position: absolute;
+        top:30%;
+        margin-left: 140px;
+}
+
+.description h1 {
+        font-family: Luminari;
+        font-size: 54px;
+        margin-left: 60px;
+}
