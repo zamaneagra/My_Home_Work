@@ -6,6 +6,10 @@ body {
         font-family: 'PT Sans', sans-serif;
 }
 
+.body{
+        margin-top: 10px;
+}
+
 .contianer {
 
 }
@@ -18,18 +22,20 @@ ul, li {
 /* change nav background color */
 .navbar {
         background-color: #062c33;
-        height: 45px;
-}
-/* change the link color */
-.navbar .navbar-nav .nav-link {
-        color: lightyellow;
+        height: 35px;
         font-size: 18px;
 }
+
 /* change the color of active or hovered links */
-.nav-item.active .nav-link,
+.nav-item, .nav-link {
+        color: yellow;
+}
+.nav-item.active .nav-link {
+        color: white;
+}
 .nav-item:focus .nav-link,
 .nav-item:hover .nav-link {
-        color: yellow;
+        color: white;
 }
 
 /* my header style */
