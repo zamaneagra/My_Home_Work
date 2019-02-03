@@ -57,7 +57,7 @@ ul, li {
 
 .description{
         font-size: 24px;
-        text-align: justify;
+        text-align: left;
         text-shadow: 2px 1px lightgray;
         width: 900px;
         height: auto;
@@ -65,14 +65,17 @@ ul, li {
         position: absolute;
         top:30%;
         margin-left: 140px;
+        line-height: 2.5em;
+
 }
 
 .description h1 {
         font-family: Luminari;
         font-size: 54px;
-        margin-left: 60px;
+        margin-left: 40px;
 }
 
+/* footer style */
 .footer{
         background-color: #062c33;
         height: 30px;
@@ -85,4 +88,16 @@ ul, li {
         font-weight: bold;
         text-align: center;
         height: 60px;
+}
+
+/* custom button */
+.custom-btn {
+        background-color: #062c33;
+        border-color: #062c33;
+        color: white;
+}
+.custom-btn:hover {
+        background-color: #2e6da4;
+        border-color: #2e6da4;
+        color: white;
 }
