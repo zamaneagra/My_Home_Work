@@ -5,17 +5,14 @@
 body {
         font-family: 'PT Sans', sans-serif;
 }
-
 .body{
         margin-top: 10px;
 }
-
 h1 {
         color: #062c33;
         font-weight: bolder;
         margin: 40px 0px 5px 105px;
 }
-
 ul, li {
         display: block;
         padding: 0;
@@ -89,14 +86,12 @@ ul, li {
         color: black;
         font-weight: bolder;
 }
-
 /* footer style */
 .footer{
         background-color: #062c33;
         height: 30px;
         line-height: 30px;
 }
-
 .copyright{
         font-size: 14px;
         color: white;
@@ -141,9 +136,6 @@ ul, li {
         color: #0c5460;
         font-weight: bold;
 }
-
-
-
 input[type=text], select, textarea {
         width: 100%;
         padding: 12px;
@@ -154,7 +146,6 @@ input[type=text], select, textarea {
         margin-bottom: 16px;
         resize: vertical;
 }
-
 input[type=submit] {
         background-color: #062c33;
         color: white;
@@ -164,11 +155,9 @@ input[type=submit] {
         cursor: pointer;
         width: 100%;
 }
-
 input[type=submit]:hover {
         background-color: #627073;
 }
-
 .container-form {
         border-radius: 5px;
         background-color: lightsteelblue;
