@@ -13,45 +13,48 @@
     <link rel="stylesheet" href="styles/animate.css">
     <!-- Scripts -->
     <script type="text/javascript" src="js/vendor/jQuery.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
-	<title>...</title>
+	<title>Home Work 4</title>
 </head>
 <body>
-<!--nav bar -->
-<div class="container">
 
-        <nav class="navbar fixed-top navbar-expand-lg">
+<nav class="navbar navbar-expand-lg navbar-dark nav-custom fixed-top">
+    <div class="navbar-left">
+        <ul class="nav navbar-nav navbar-left">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home page<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+    <div class="navbar-right ml-auto">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#CollapseMyNavbar" aria-controls="CollapseMyNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="CollapseMyNavbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Post</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-            <div class="container collapse navbar-collapse" id="navbarSupportedContent">
-<!-- nav bar left -->
-                <ul class="navbar-nav navbar-left">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-<!-- nav bar right -->
-                <ul class="navbar-nav navbar-right ">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Post</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-</div>
 
 <header class="header">
     <div class="overlay">
@@ -60,51 +63,186 @@
         <div class="container">
             <div class="description">
                 <h1 class="zoomIn animated"> Hello my dear friends !!!</h1>
-                <p class="text-justify bounceIn animated">Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>. Accusamus corporis fugit laboriosam
+                <p class="text-justify bounceIn animated">Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>.
+                    Accusamus corporis fugit laboriosam
                     officia. Animi aut dolor eveniet excepturi ipsa, nisi optio quidem quis repellendus reprehenderit
-                    rerum ut veritatis voluptate voluptatum.</p>
-                <!-- Button details collapse -->
+                    rerum ut veritatis voluptate voluptatum.
+                </p>
+
                 <button type="button" class="btn btn-sm custom-btn" data-toggle="collapse" data-target="#details">Don't touch me...</button>
-                <div id="details" class="collapse">
-                    <span style="color: red"> Te-am rugat să nu mă atingi !!! <br> Collapsibles are useful when you want to hide and show large amount of content</span>
-                </div>
+                <span style="color: red" id="details" class="collapse">
+                    Te-am rugat să nu mă atingi !!!
+                </span>
             </div>
         </div>
 
 </header>
 
-
+<!--ABOUT -->
 <section class="body">
-    <div class="container">
+    <div class="container about">
+        <h1>About me</h1>
         <hr>
         <div class="row">
-            <div class="col-lg-4 text-justify">
-                <p><span class="text-uppercase"><b>Lorem ipsum</b></span> dolor sit amet, consectetur adipisicing elit. Ab alias assumenda beatae consectetur,
-                consequuntur doloribus illum, minima natus nihil praesentium quisquam quos reiciendis, tempore
-                temporibus voluptatibus. Itaque nulla provident qui?</p>
+            <div class="col-md-4 col-sm-12 right-border">
+                <div class="image-portret ml-auto">
+                    <img src="assets/img/portret.jpg" class="centered-and-cropped image-place" width="220" height="220" style="border-radius:50%">
+                    <p class="label-img-name">Mr. John Smith</p>
+                </div>
             </div>
-            <div class="col-lg-4 text-justify">
-            <p>Dolore exercitationem expedita illo ipsa nobis quaerat quam quasi sapiente sequi, voluptatibus! Ab aut
-                earum iusto nulla praesentium provident ratione reprehenderit. Ab alias consectetur doloremque doloribus
-                esse, facere nam nihil.</p>
-            <p>Animi blanditiis cum, dolor ipsa laboriosam libero magni maxime minima molestiae omnis quae quasi quod
-                sed tempore, veritatis. Aspernatur distinctio minus officiis quasi rerum! Fugiat illo quisquam
-                repellendus vitae voluptatem.</p>
-            </div>
-            <div class="col-lg-4 text-justify">
-            <p>Libero, molestias, quas. Accusamus dolores error ipsa ipsam magni minima odit quasi suscipit! Cupiditate
-                debitis, repellat sequi sit suscipit vitae! Doloremque itaque quos veniam! Beatae doloremque eligendi
-                nesciunt rerum ut!</p>
-            <p>Aliquid aut deserunt distinctio doloremque ducimus ea eveniet excepturi illum iusto laborum laudantium
-                magni, maiores minus modi molestias mollitia natus neque non nostrum quam, quas repellat rerum suscipit
-                temporibus voluptates!</p>
-            <p>Autem debitis dolorum molestias necessitatibus nemo obcaecati porro, repellendus. Accusamus accusantium
-                adipisci, amet consequuntur deserunt doloremque doloribus est et ipsum iste labore nemo nostrum numquam
-                quae quibusdam quidem soluta vitae!</p>
+            <div class="col-md-8 col-sm-12 text-justify">
+                <div class="right-about">
+                    <h3>Mr. John Smith</h3>
+                    <p>Libero, molestias, quas. Accusamus dolores error ipsa ipsam magni minima odit quasi suscipit! Cupiditate
+                        debitis, repellat sequi sit suscipit vitae! Doloremque itaque quos veniam! Beatae doloremque eligendi
+                        nesciunt rerum ut!</p>
+                    <p>Aliquid aut deserunt distinctio doloremque ducimus ea eveniet excepturi illum iusto laborum laudantium
+                        magni, maiores minus modi molestias mollitia natus neque non nostrum quam, quas repellat rerum suscipit
+                        temporibus voluptates!</p>
+                </div>
             </div>
         </div>
         <hr>
     </div>
+
+<!-- PORTOFOLIO -->
+    <div class="container portfolio">
+        <h1>Portfolio</h1>
+        <hr>
+        <div class="row m-auto">
+            <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                <img src="assets/img/site-1.png" alt="site" class="img-fluid" width="540" height="400">
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                <img src="assets/img/site-2.png" alt="site" class="img-fluid" width="540" height="400">
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                <img src="assets/img/site-3.png" alt="site" class="img-fluid" width="540" height="400">
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                <img src="assets/img/site-4.png" alt="site" class="img-fluid" width="540" height="400">
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                <img src="assets/img/site-5.png" alt="site" class="img-fluid" width="540" height="400">
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                <img src="assets/img/site-6.png" alt="site" class="img-fluid" width="540" height="400">
+            </div>
+        </div>
+    </div>
+
+<!--BLOG -->
+    <div class="container portfolio">
+        <h1>Blog</h1>
+        <hr>
+        <div class="row m-2">
+            <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+                <div class="card">
+                    <img class="card-img-top" src="assets/img/site-3.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer card-footer-height">
+                        <a href="#" class="">Reed more...</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+                <div class="card">
+                    <img class="card-img-top" src="assets/img/site-3.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer card-footer-height">
+                        <a href="#" class="">Reed more...</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+                <div class="card">
+                    <img class="card-img-top" src="assets/img/site-3.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer card-footer-height">
+                        <a href="#" class="">Reed more...</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+                <div class="card">
+                    <img class="card-img-top" src="assets/img/site-3.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer card-footer-height">
+                        <a href="#" class="">Reed more...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+                <div class="card">
+                    <img class="card-img-top" src="assets/img/site-3.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer card-footer-height">
+                        <a href="#" class="">Reed more...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+                <div class="card">
+                    <img class="card-img-top" src="assets/img/site-3.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer card-footer-height">
+                        <a href="#" class="">Reed more...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Contact Us -->
+    <div class="container portfolio">
+        <hr>
+        <div class="row">
+            <div class="col-sm-4">
+                <h1 class="ml-sm-0 ml-md-2 ml-lg-5">Contact Us</h1>
+            </div>
+            <div class="col-sm-8">
+                <div class="container-form">
+                    <form action="#">
+                        <input type="text" id="name" name="name" placeholder="Your name">
+                        <input type="text" id="email" name="email" placeholder="Your e-mail address">
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
 </section>
 
 
@@ -113,6 +251,10 @@
             <p>Copyright @ 2019</p>
         </div>
 </footer>
+
+
+
+
 
 </body>
 </html>
