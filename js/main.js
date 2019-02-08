@@ -35,3 +35,10 @@ $(document).ready(function(){
         }  // End if
     });
 });
+
+
+var ClicksCounter = 0;
+function CountClicks(element) {
+    ClicksCounter++;
+    element.innerHTML="(Click to vote: " + ClicksCounter + ")";
+}

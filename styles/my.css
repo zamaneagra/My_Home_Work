@@ -165,4 +165,9 @@ input[type=submit]:hover {
         padding: 20px;
 }
 
-
+.span-blog{
+        color: darkred;
+        margin-left: 4px;
+        font-style: italic;
+        font-size: 14px;
+}
