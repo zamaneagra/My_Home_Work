@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="styles/form-style.css">
     <!-- Anime -->
     <link rel="stylesheet" href="styles/animate.css">
-    <!-- Scripts -->
+    <!-- JavaScripts -->
     <script type="text/javascript" src="js/vendor/jQuery.min.js"></script>
     <script type="text/javascript" src="js/vendor/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
@@ -29,33 +29,31 @@
             </li>
         </ul>
     </div>
+
     <div class="navbar-right ml-auto">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#CollapseMyNavbar" aria-controls="CollapseMyNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="CollapseMyNavbar">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                <li class="nav-item" >
+                    <a class="nav-link" data-value="about" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
+                    <a class="nav-link" data-value="portfolio" href="#portfolio">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Team</a>
+                    <a class="nav-link" data-value="blog" href="#blog">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Post</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" data-value="contact" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-
+<!-- HEADER -->
 <header class="header">
     <div class="overlay">
     </div>
@@ -80,7 +78,7 @@
 
 <!--ABOUT -->
 <section class="body">
-    <div class="container about">
+    <div class="container about" id="about">
         <h1>About me</h1>
         <hr>
         <div class="row">
@@ -106,7 +104,7 @@
     </div>
 
 <!-- PORTOFOLIO -->
-    <div class="container portfolio">
+    <div class="container portfolio" id="portfolio">
         <h1>Portfolio</h1>
         <hr>
         <div class="row m-auto">
@@ -137,7 +135,7 @@
     </div>
 
 <!--BLOG -->
-    <div class="container portfolio">
+    <div class="container blog" id="blog">
         <h1>Blog</h1>
         <hr>
         <div class="row m-2">
@@ -220,12 +218,13 @@
     </div>
 
 <!-- Contact Us -->
-    <div class="container portfolio">
+    <div class="container contact" id="contact">
         <hr>
         <div class="row">
             <div class="col-sm-4">
                 <h1 class="ml-sm-0 ml-md-2 ml-lg-5">Contact Us</h1>
             </div>
+
             <div class="col-sm-8">
                 <div class="container-form">
                     <form action="#">
@@ -235,8 +234,6 @@
                         <input type="submit" value="Submit">
                     </form>
                 </div>
-
-
             </div>
         </div>
     </div>
