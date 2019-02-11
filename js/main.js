@@ -9,6 +9,8 @@ $(".navbar-right a").click(function(){
 })
 */
 
+
+
 $(document).ready(function(){
     // Add scrollspy to <body>
     $('body').scrollspy({target: ".navbar-right", offset: 50});
@@ -37,9 +39,39 @@ $(document).ready(function(){
     });
 });
 
-
+//counter of clicks
 var ClicksCounter = 0;
 function CountClicks(element) {
     ClicksCounter++;
     element.innerHTML="(Click to vote: " + ClicksCounter + ")";
-}
+};
+
+
+// Making changed owner of profile
+
+// create Full Name of new Owner
+
+var newOwner = {
+    firstName: "Vanea",
+    lastName: "Drujba",
+    miss: "Mr."
+};
+
+
+var FullName = newOwner.lastName + " " + newOwner.firstName;
+
+// insert full name above  the profile image
+document.getElementById("newowner").innerHTML= FullName;
+//insert full name in Title
+document.getElementById("newowner2").innerHTML= FullName;
+// insert Miss or Mr
+document.getElementById("miss").innerHTML= newOwner.miss;
+
+
+
+
+// var newOwner.firstName = document.getValueById("newfirstName").value;
+
+// console.log(newOwner.firstName);
+
+

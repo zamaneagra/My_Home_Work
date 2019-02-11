@@ -11,11 +11,7 @@
     <link rel="stylesheet" type="text/css" href="styles/form-style.css">
     <!-- Anime -->
     <link rel="stylesheet" href="styles/animate.css">
-    <!-- JavaScripts -->
-    <script type="text/javascript" src="js/vendor/jQuery.min.js"></script>
-    <script type="text/javascript" src="js/vendor/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+
 
 	<title>Home Work 4</title>
 </head>
@@ -82,21 +78,67 @@
         <h1>About me</h1>
         <hr>
         <div class="row">
+
             <div class="col-md-4 col-sm-12 right-border">
                 <div class="image-portret ml-auto">
                     <img src="assets/img/portret.jpg" class="centered-and-cropped image-place" width="220" height="220" style="border-radius:50%">
-                    <p class="label-img-name">Mr. John Smith</p>
+                    <!--Includem Full Name -->
+                    <p id="newowner" class="label-img-name">...</p>
                 </div>
             </div>
+
             <div class="col-md-8 col-sm-12 text-justify">
                 <div class="right-about">
-                    <h3>Mr. John Smith</h3>
+                    <!-- include Mr or Mis -->
+                    <h3> <span id="miss"></span> <span id="newowner2"></span> </h3>
                     <p>Libero, molestias, quas. Accusamus dolores error ipsa ipsam magni minima odit quasi suscipit! Cupiditate
                         debitis, repellat sequi sit suscipit vitae! Doloremque itaque quos veniam! Beatae doloremque eligendi
                         nesciunt rerum ut!</p>
                     <p>Aliquid aut deserunt distinctio doloremque ducimus ea eveniet excepturi illum iusto laborum laudantium
                         magni, maiores minus modi molestias mollitia natus neque non nostrum quam, quas repellat rerum suscipit
                         temporibus voluptates!</p>
+
+                    <button id="changeAbout" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        Change your data
+                    </button>
+
+                    <!-- Start Pop Up The Modal-->
+
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">You can change your name here:</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="container-form">
+                                                <form action="#">
+                                                    <input type="text" id="newfirstName" name="first-name" placeholder="Fill your first name">
+                                                    <input type="text" id="newlastName" name="last-name" placeholder="Fill your last name">
+                                                    <input type="submit" value="Submit">
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No thanks</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End PopUp -->
                 </div>
             </div>
         </div>
@@ -253,6 +295,10 @@
 
 
 
-
+<!-- JavaScripts -->
+<script type="text/javascript" src="js/vendor/jQuery.min.js"></script>
+<script type="text/javascript" src="js/vendor/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
