@@ -83,14 +83,14 @@
                 <div class="image-portret ml-auto">
                     <img src="assets/img/portret.jpg" class="centered-and-cropped image-place" width="220" height="220" style="border-radius:50%">
                     <!--Includem Full Name -->
-                    <p id="newowner" class="label-img-name">...</p>
+                    <p id="newowner" class="label-img-name text-capitalize">vanea drujba</p>
                 </div>
             </div>
 
             <div class="col-md-8 col-sm-12 text-justify">
                 <div class="right-about">
                     <!-- include Mr or Mis -->
-                    <h3> <span id="miss"></span> <span id="newowner2"></span> </h3>
+                    <h3> <span id="miss"> Mr.</span> <span class="text-capitalize" id="newowner2">Vanea Drujba</span> </h3>
                     <p>Libero, molestias, quas. Accusamus dolores error ipsa ipsam magni minima odit quasi suscipit! Cupiditate
                         debitis, repellat sequi sit suscipit vitae! Doloremque itaque quos veniam! Beatae doloremque eligendi
                         nesciunt rerum ut!</p>
@@ -101,6 +101,7 @@
                     <button id="changeAbout" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                         Change your data
                     </button>
+
 
                     <!-- Start Pop Up The Modal-->
 
@@ -119,11 +120,12 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="container-form">
-                                                <form action="#">
-                                                    <input type="text" id="newfirstName" name="first-name" placeholder="Fill your first name">
-                                                    <input type="text" id="newlastName" name="last-name" placeholder="Fill your last name">
-                                                    <input type="submit" value="Submit">
-                                                </form>
+                                                <div class="row">
+                                                    <input type="text" id="firstName">
+                                                </div>
+                                                <div class="row">
+                                                    <input type="text" id="lastName">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -132,9 +134,13 @@
 
                                 <!-- Modal footer -->
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No thanks</button>
+                                    <button onclick="getValues()" data-dismiss="modal" >
+                                        Submit
+                                    </button>
+                                    <button data-dismiss="modal">
+                                        No thanks
+                                    </button>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -190,7 +196,6 @@
                     </div>
                     <div class="card-footer card-footer-height">
                         <a href="#blog" class="">Reed more...</a>
-                        <span class="span-blog" onclick="CountClicks (this)">(Click to vote: 0)</span>
                     </div>
                 </div>
             </div>
