@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- Latest compiled and minified CSS file ---> 
+	<link rel="stylesheet" type="text/css" href="../styles/bootstrap/bootstrap.min.css">
+    <!-- LESS-->
+    <link rel="stylesheet/less" type="text/css" href="main.less" />
+    <!-- Optional theme-->
+	<link rel="stylesheet" type="text/css" href="../styles/bootstrap/bootstrap-theme.min.css">
+        <!-- My own CSS
+        <link rel="stylesheet" type="text/css" href="styles/my.css">
+        <link rel="stylesheet" type="text/css" href="styles/form-style.css">
+        -->
+    <!-- Anime -->
+    <link rel="stylesheet" href="../styles/animate.css">
+
+
+	<title>Home Work 4</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark nav-custom fixed-top">
+    <div class="navbar-left">
+        <ul class="nav navbar-nav navbar-left">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home page<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="navbar-right ml-auto">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#CollapseMyNavbar" aria-controls="CollapseMyNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="CollapseMyNavbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" >
+                    <a class="nav-link" data-value="about" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-value="portfolio" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-value="blog" href="#blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-value="contact" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="overlay">
+    </div>
+
+        <div class="container">
+            <div class="description">
+                <h1 class="zoomIn animated"> Hello my dear friends !!!</h1>
+                <p class="text-justify bounceIn animated">Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>.
+                    Accusamus corporis fugit laboriosam
+                    officia. Animi aut dolor eveniet excepturi ipsa, nisi optio quidem quis repellendus reprehenderit
+                    rerum ut veritatis voluptate voluptatum.
+                </p>
+
+                <button type="button" class="btn btn-sm custom-btn" data-toggle="collapse" data-target="#details">Don't touch me...</button>
+                <span style="color: red" id="details" class="collapse">
+                    Te-am rugat să nu mă atingi !!!
+                </span>
+            </div>
+        </div>
+
+</header>
+
+<!--ABOUT -->
+<section class="body">
+    <div class="container about" id="about">
+        <h1>About me</h1>
+        <hr>
+        <div class="row">
+
+            <div class="col-md-4 col-sm-12 right-border">
+                <div class="image-portret ml-auto">
+                    <img src="../assets/img/portret.jpg" class="img-about " width="220" height="220" style="border-radius:50%">
+                    <!--Includem Full Name -->
+                    <p id="newowner" class="label-img-name text-capitalize">vanea drujba</p>
+                </div>
+            </div>
+
+            <div class="col-md-8 col-sm-12 text-justify">
+                <div class="right-about">
+                    <!-- include Mr or Mis -->
+                    <h3> <span id="miss"> Mr.</span> <span class="text-capitalize" id="newowner2">Vanea Drujba</span> </h3>
+                    <p>Libero, molestias, quas. Accusamus dolores error ipsa ipsam magni minima odit quasi suscipit! Cupiditate
+                        debitis, repellat sequi sit suscipit vitae! Doloremque itaque quos veniam! Beatae doloremque eligendi
+                        nesciunt rerum ut!</p>
+                    <p>Aliquid aut deserunt distinctio doloremque ducimus ea eveniet excepturi illum iusto laborum laudantium
+                        magni, maiores minus modi molestias mollitia natus neque non nostrum quam, quas repellat rerum suscipit
+                        temporibus voluptates!</p>
+
+                    <button id="changeAbout" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        Change your data
+                    </button>
+
+
+                    <!-- Start Pop Up The Modal-->
+
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">You can change your name here:</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="container-form">
+                                                <div class="row">
+                                                    <input type="text" id="firstName">
+                                                </div>
+                                                <div class="row">
+                                                    <input type="text" id="lastName">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button onclick="getValues()" data-dismiss="modal" >
+                                        Submit
+                                    </button>
+                                    <button data-dismiss="modal">
+                                        No thanks
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End PopUp -->
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+<!-- PORTOFOLIO -->
+    <div class="container portfolio" id="portfolio">
+        <h1>Portfolio</h1>
+        <hr>
+        <div class="row m-auto">
+            <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                <img src="../assets/img/site-1.png" alt="site" class="img-fluid">
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                <img src="../assets/img/site-2.png" alt="site" class="img-fluid">
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                <img src="../assets/img/site-3.png" alt="site" class="img-fluid">
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                <img src="../assets/img/site-4.png" alt="site" class="img-fluid">
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                <img src="../assets/img/site-5.png" alt="site" class="img-fluid">
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 p-2">
+                <img src="../assets/img/site-6.png" alt="site" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+<!--BLOG -->
+    <div class="container blog" id="blog">
+        <h1>Blog</h1>
+        <hr>
+        <div class="row m-2">
+            <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+                <div class="card">
+                    <img class="card-img-top" src="../assets/img/site-3.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer card-footer-height">
+                        <a href="#blog" class="">Reed more...</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+                <div class="card">
+                    <img class="card-img-top" src="../assets/img/site-3.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer card-footer-height">
+                        <a href="#" class="">Reed more...</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+                <div class="card">
+                    <img class="card-img-top" src="../assets/img/site-3.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer card-footer-height">
+                        <a href="#" class="">Reed more...</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+                <div class="card">
+                    <img class="card-img-top" src="../assets/img/site-3.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer card-footer-height">
+                        <a href="#" class="">Reed more...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+                <div class="card">
+                    <img class="card-img-top" src="../assets/img/site-3.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer card-footer-height">
+                        <a href="#" class="">Reed more...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 p-2">
+                <div class="card">
+                    <img class="card-img-top" src="../assets/img/site-3.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer card-footer-height">
+                        <a href="#" class="">Reed more...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Contact Us -->
+    <div class="container contact" id="contact">
+        <hr>
+        <div class="row">
+            <div class="col-sm-4">
+                <h1 class="ml-sm-0 ml-md-2 ml-lg-5">Contact Us</h1>
+            </div>
+
+            <div class="col-sm-8">
+                <div class="container-form">
+                    <form action="#">
+                        <input type="text" id="name" name="name" placeholder="Your name">
+                        <input type="text" id="email" name="email" placeholder="Your e-mail address">
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</section>
+
+
+<footer class="footer">
+        <div class="copyright">
+            <p>Copyright @ 2019</p>
+        </div>
+</footer>
+
+
+
+
+<!-- JavaScripts -->
+<script type="text/javascript" src="../js/vendor/jQuery.min.js"></script>
+<script type="text/javascript" src="../js/vendor/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+<script src="../styles/less/less.min.js"></script>
+</body>
+</html>

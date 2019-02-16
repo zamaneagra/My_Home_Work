@@ -1,0 +1,182 @@
+/* ==========================================================================
+   LESS
+   ========================================================================== */
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+body .body {
+  margin-top: 10px;
+  padding-bottom: 80px;
+}
+body h1 {
+  color: #062c33;
+  font-weight: bolder;
+  margin: 40px 0px 5px 105px;
+}
+.navbar {
+  background-color: #062c33;
+  font-size: 18px;
+}
+.navbar a {
+  color: #fff200 !important;
+}
+.navbar .active .nav-link {
+  color: #fcfcfc !important;
+}
+ul,
+li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.nav-item .nav-link:focus {
+  color: #fcfcfc !important;
+}
+.nav-item .nav-link:hover {
+  color: #fcfcfc !important;
+}
+.header {
+  background-image: url("../assets/img/img_header.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.header .overlay {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(244, 244, 244, 0.6);
+}
+.header .description {
+  font-family: 'PT Sans';
+  font-size: 24px;
+  text-align: left;
+  text-shadow: 2px 1px lightgray;
+  max-width: 900px;
+  height: auto;
+  padding: 1em;
+  position: absolute;
+  margin-top: 70px;
+  line-height: 2.5em;
+}
+.header .description span {
+  font-family: 'PT Sans';
+  font-size: 18px;
+}
+.header .description h1 {
+  font-family: 'Luminari';
+  font-size: 54px;
+  margin-left: 40px;
+}
+.custom-btn {
+  background-color: #062c33;
+  border: 1px solid #338454;
+  color: #fcfcfc;
+}
+.custom-btn:hover {
+  background-color: #fff200;
+  border: 2px dotted #ff0000;
+  color: black;
+  font-weight: bolder;
+}
+.right-border {
+  border-right: 4px solid #138ea5;
+}
+.right-border .image-portret {
+  width: 230px;
+}
+.right-border .image-portret .img-about {
+  object-fit: cover;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.right-border .image-portret .label-img-name {
+  font-size: 18px;
+  text-align: center;
+  color: #138ea5;
+}
+.right-about h3 {
+  color: #0e6777;
+}
+.right-about p {
+  color: #338454;
+}
+.modal-content {
+  width: 600px;
+}
+.portfolio img {
+  width: 540px;
+  height: 240px;
+}
+.blog h5 {
+  color: #19b6d3;
+}
+.blog a {
+  color: #062c33;
+}
+.blog a:hover {
+  color: #19b6d3;
+}
+.blog p {
+  color: #338454;
+}
+.blog .card {
+  -moz-box-shadow: 0 0 6px #f2f2f2;
+  -webkit-box-shadow: 0 0 6px #f2f2f2;
+  box-shadow: 0 0 6px #f2f2f2;
+}
+.blog .card-footer-height {
+  padding: 0.35rem 1.65rem;
+}
+.blog .card-title {
+  color: #062c33;
+  font-weight: bold;
+}
+.container-form {
+  border-radius: 5px;
+  background-color: #c0eff8;
+  padding: 20px;
+}
+.container-form input[type=text],
+.container-form select,
+.container-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #fff200;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.container-form input[type=submit] {
+  background-color: #062c33;
+  color: #fcfcfc;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+.container-form input[type=submit]:hover {
+  background-color: #338454;
+}
+.footer {
+  background-color: #062c33;
+  height: 30px;
+  line-height: 30px;
+}
+.copyright {
+  font-size: 14px;
+  color: #fcfcfc;
+  font-weight: bold;
+  text-align: center;
+  height: 60px;
+}
+/*# sourceMappingURL=main.css.map */

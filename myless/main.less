@@ -1,0 +1,267 @@
+
+/* ==========================================================================
+   LESS
+   ========================================================================== */
+
+// colors //
+@brandColor: #062c33;
+@yellowColor: #fff200;
+@whiteColor: #fcfcfc;
+@overlayColor: rgba(244,244,244,0.60);
+@lemonColor: #338454;
+@redColor: #ff0000;
+@shadowColor:#f2f2f2;
+@textTitleCard:#0c5460;
+
+// fonts family //
+@fontOverlay: 'Luminari';
+@fontTitle: 'PT Sans';
+@fontCard: '';
+
+// portfolio img //
+@imgWidth: 540px;
+@imgHeight: @imgWidth - 300px;
+
+
+body {
+  font-family: 'PT Sans', sans-serif;
+
+  .body{
+    margin-top: 10px;
+    padding-bottom: 80px;
+  }
+
+  h1 {
+    color: @brandColor;
+    font-weight: bolder;
+    margin: 40px 0px 5px 105px;
+  }
+
+
+}
+
+.navbar {
+    background-color: @brandColor;
+    font-size: 18px;
+
+  a {
+    color: @yellowColor !important;
+  }
+
+  .active .nav-link {
+    color: @whiteColor !important;
+  }
+
+}
+
+
+ul, li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+
+.nav-item {
+
+  .nav-link {
+    &:focus {
+      color: @whiteColor !important;
+    }
+
+    &:hover{
+      color: @whiteColor !important;
+    }
+  }
+
+}
+
+.header{
+  background-image: url("../assets/img/img_header.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+    .overlay {
+      position: absolute;
+      min-height: 100%;
+      min-width: 100%;
+      left: 0;
+      top: 0;
+      background: @overlayColor;
+    }
+
+    .description{
+      font-family: @fontTitle;
+      font-size: 24px;
+      text-align: left;
+      text-shadow: 2px 1px lightgray;
+      max-width: 900px;
+      height: auto;
+      padding: 1em;
+      position: absolute;
+      margin-top: 70px;
+      line-height: 2.5em;
+
+        span{
+          font-family: @fontTitle;
+          font-size: 18px;
+        }
+
+        h1 {
+          font-family: @fontOverlay;
+          font-size: 54px;
+          margin-left: 40px;
+        }
+
+    }
+
+}
+
+.custom-btn {
+    background-color: @brandColor;
+    border: 1px solid @lemonColor;
+    color: @whiteColor;
+
+      &:hover {
+        background-color: @yellowColor;
+        border: 2px dotted @redColor;
+        color: black;
+        font-weight: bolder;
+      }
+    }
+
+
+.right-border{
+  border-right: 4px solid lighten(@brandColor, 25%);
+
+    .image-portret {
+      width: 230px;
+
+      .img-about{
+        object-fit: cover;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+
+      .label-img-name{
+        font-size: 18px;
+        text-align: center;
+        color: lighten(@brandColor, 25%);
+      }
+
+    }
+  }
+
+.right-about {
+
+  h3 {
+    color: lighten(@brandColor, 15%);
+  }
+
+  p {
+    color: @lemonColor;
+  }
+}
+
+.modal-content{
+  width: 600px;
+}
+
+
+.portfolio{
+  img {
+    width: @imgWidth;
+    height: @imgHeight;
+  }
+}
+
+.blog{
+
+  h5{
+    color: lighten(@brandColor, 35%);
+  }
+
+  a{
+    color: @brandColor;
+
+    &:hover{
+      color: lighten(@brandColor, 35%);
+    }
+  }
+
+  p{
+    color: @lemonColor;
+  }
+
+  .card{
+    -moz-box-shadow: 0 0 6px @shadowColor;
+    -webkit-box-shadow: 0 0 6px @shadowColor;
+    box-shadow: 0 0 6px @shadowColor;
+  }
+
+  .card-footer-height{
+    padding: .35rem 1.65rem;
+  }
+
+  .card-title{
+    color: @brandColor;
+    font-weight: bold;
+  }
+}
+
+
+.container-form {
+  border-radius: 5px;
+  background-color: lighten(@brandColor, 75%);
+  padding: 20px;
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid @yellowColor;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  input[type=submit] {
+    background-color: @brandColor;
+    color: @whiteColor;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+
+    &:hover {
+      background-color: @lemonColor;
+    }
+  }
+
+}
+
+.footer{
+  background-color: @brandColor;
+  height: 30px;
+  line-height: 30px;
+}
+
+.copyright{
+  font-size: 14px;
+  color: @whiteColor;
+  font-weight: bold;
+  text-align: center;
+  height: 60px;
+}
+
+
+
+
+
+
