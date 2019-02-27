@@ -13,7 +13,13 @@ body h1 {
   font-weight: bolder;
   margin: 40px 0px 5px 105px;
 }
-.navbar {
+ul,
+li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.navcustom {
   background-color: #062c33;
   font-size: 18px;
 }
@@ -23,16 +29,12 @@ body h1 {
 .navbar .active .nav-link {
   color: #fcfcfc !important;
 }
-ul,
-li {
-  display: block;
-  padding: 0;
-  margin: 0;
-}
-.nav-item .nav-link:focus {
+.navbar .nav-item .nav-link:focus {
+  border-bottom: 1px solid white;
   color: #fcfcfc !important;
 }
-.nav-item .nav-link:hover {
+.navbar .nav-item .nav-link:hover {
+  border-bottom: 1px solid white;
   color: #fcfcfc !important;
 }
 .header {
@@ -178,5 +180,40 @@ li {
   font-weight: bold;
   text-align: center;
   height: 60px;
+}
+#buttonScrollTop {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 100px;
+  right: 40px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#buttonScrollTop::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#buttonScrollTop:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#buttonScrollTop:active {
+  background-color: #555;
+}
+#buttonScrollTop.show {
+  opacity: 1;
+  visibility: visible;
 }
 /*# sourceMappingURL=main.css.map */

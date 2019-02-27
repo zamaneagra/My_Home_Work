@@ -36,13 +36,21 @@ body {
     font-weight: bolder;
     margin: 40px 0px 5px 105px;
   }
+}
 
+ul, li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
 
+.navcustom{
+  background-color: @brandColor;
+  font-size: 18px;
 }
 
 .navbar {
-    background-color: @brandColor;
-    font-size: 18px;
+
 
   a {
     color: @yellowColor !important;
@@ -52,28 +60,18 @@ body {
     color: @whiteColor !important;
   }
 
-}
-
-
-ul, li {
-  display: block;
-  padding: 0;
-  margin: 0;
-}
-
-
-.nav-item {
-
-  .nav-link {
-    &:focus {
-      color: @whiteColor !important;
-    }
-
-    &:hover{
-      color: @whiteColor !important;
-    }
+  .nav-item {
+      .nav-link {
+          &:focus {
+            border-bottom: 1px solid white;
+            color: @whiteColor !important;
+          }
+          &:hover {
+            border-bottom: 1px solid white;
+            color: @whiteColor !important;
+          }
+      }
   }
-
 }
 
 .header{
@@ -83,16 +81,16 @@ ul, li {
   background-position: center;
   height: 100vh;
 
-    .overlay {
-      position: absolute;
-      min-height: 100%;
-      min-width: 100%;
-      left: 0;
-      top: 0;
-      background: @overlayColor;
-    }
+  .overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: @overlayColor;
+  }
 
-    .description{
+  .description{
       font-family: @fontTitle;
       font-size: 24px;
       text-align: left;
@@ -104,19 +102,17 @@ ul, li {
       margin-top: 70px;
       line-height: 2.5em;
 
-        span{
-          font-family: @fontTitle;
-          font-size: 18px;
-        }
+      span{
+        font-family: @fontTitle;
+        font-size: 18px;
+      }
 
-        h1 {
-          font-family: @fontOverlay;
-          font-size: 54px;
-          margin-left: 40px;
-        }
-
-    }
-
+      h1 {
+        font-family: @fontOverlay;
+        font-size: 54px;
+        margin-left: 40px;
+      }
+  }
 }
 
 .custom-btn {
@@ -124,38 +120,36 @@ ul, li {
     border: 1px solid @lemonColor;
     color: @whiteColor;
 
-      &:hover {
-        background-color: @yellowColor;
-        border: 2px dotted @redColor;
-        color: black;
-        font-weight: bolder;
-      }
+    &:hover {
+      background-color: @yellowColor;
+      border: 2px dotted @redColor;
+      color: black;
+      font-weight: bolder;
     }
-
+}
 
 .right-border{
   border-right: 4px solid lighten(@brandColor, 25%);
 
-    .image-portret {
-      width: 230px;
+  .image-portret {
+    width: 230px;
 
-      .img-about{
-        object-fit: cover;
-        margin-top: 15px;
-        margin-bottom: 5px;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-      }
+    .img-about{
+      object-fit: cover;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
 
-      .label-img-name{
-        font-size: 18px;
-        text-align: center;
-        color: lighten(@brandColor, 25%);
-      }
-
+    .label-img-name{
+      font-size: 18px;
+      text-align: center;
+      color: lighten(@brandColor, 25%);
     }
   }
+}
 
 .right-about {
 
@@ -171,7 +165,6 @@ ul, li {
 .modal-content{
   width: 600px;
 }
-
 
 .portfolio{
   img {
@@ -214,7 +207,6 @@ ul, li {
   }
 }
 
-
 .container-form {
   border-radius: 5px;
   background-color: lighten(@brandColor, 75%);
@@ -243,7 +235,6 @@ ul, li {
       background-color: @lemonColor;
     }
   }
-
 }
 
 .footer{
@@ -260,8 +251,41 @@ ul, li {
   height: 60px;
 }
 
+// button scroll up //
+#buttonScrollTop {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 100px;
+  right: 40px;
+  transition: background-color .3s, opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
 
-
-
-
+  &::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  &:active {
+    background-color: #555;
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 

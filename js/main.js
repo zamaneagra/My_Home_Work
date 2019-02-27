@@ -1,19 +1,6 @@
-
-/*
-// Nu este animat - de asta nu l-am folosit //
-
-$(".navbar-right a").click(function(){
-    $("body,html").animate({
-        scrollTop:$("#" + $(this).data('value')).offset().top
-    },1000)
-})
-
-
-// console.log(newOwner.firstName);
-
-*/
-
 $(document).ready(function(){
+    /////////////////////////////////////////////////
+    ///  ------   Animated scrol of navbar  -----   ///
     // Add scrollspy to <body>
     $('body').scrollspy({target: ".navbar-right", offset: 50});
 
@@ -23,55 +10,96 @@ $(document).ready(function(){
         if (this.hash !== "") {
             // Prevent default anchor click behavior
             event.preventDefault();
-
             // Store hash
             var hash = this.hash;
-
             // Using jQuery's animate() method to add smooth page scroll
             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
                 //adding offset top - 70 px , fiindca nav este fixat top
                 scrollTop: $(hash).offset().top - 70
-            }, 800, function(){
+            }, 2200, function(){
 
                 // Add hash (#) to URL when done scrolling (default click behavior)
                 window.location.hash = hash;
             });
-        }  // End if
+        };  // End if
     });
+
+    //////////////////////////////////////////////////
+    ///  ------   Fade In Click on Image  -----   ///
+    // daca pe clasa fadeImg se face click, se extrage din acest
+    // element atributul ID, se pune in variabila si apoi in Hide si fadeIn
+    $('.fadeImg').on('mouseenter', function () {
+        var imgID = $(this).attr('id');
+        $('#'+imgID).hide().fadeIn(800);
+    });
+
+    ////////////////////////////////////////////////////////////
+    ///  ------   Click on button hide all section  -----   ///
+    $('#btn').click(function(){
+        $('.header').hide();
+    });
+
+    //////////////////////////////////////
+    ///  ------   Zoom image  -----   ///
+    $('.zoomple').zoomple({
+        offset : {x:-150,y:-150},
+        zoomWidth : 300,
+        zoomHeight : 300,
+        roundedCorners : true
+    });
+
+    //////////////////////////////////////
+    ///  ------ animate <p> on header -----   ///
+    $('.animateHeader').on('click', function () {
+        $('.animateHeader').animate({
+            right: '50px',
+            opacity: '1.0',
+            height: '450px',
+            width: '550px'
+        });
+
+        $('.animateHeader').on('click', function () {
+            $('.animateHeader').animate({
+                left: '50px',
+                opacity: '1.0',
+                height: '450px',
+                width: '750px'
+            });
+        });
+    });
+
+    //////////////////////////////////////
+    ///  ------ animate card in blog -----   ///
+    $('.card').on('mouseenter', function () {
+        let cardID = $(this).attr('id');
+        $('#'+cardID).animate({height: '102%', width: '105%', opacity: '1'})
+                    .animate({height: '100%', width: '100%', opacity: '1'});
+    });
+
+
+    //////////////////////////////////////
+    ///  ------ button scrol top -----   ///
+    let btn = $('#buttonScrollTop');
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    btn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+    });
+
+
 });
 
-// create var Full Name of the Owner
-var newOwner = {
-    firstName: "Vanea",
-    lastName: "Drujba",
-    miss: "Mr."
-};
-
-var FullName = newOwner.lastName + " " + newOwner.firstName;
-
-// insert full name above  the profile image
-//document.getElementById("newowner").innerHTML= FullName;
-//insert full name in Title
-//document.getElementById("newowner2").innerHTML= FullName;
-// insert Miss or Mr
-//document.getElementById("miss").innerHTML= newOwner.miss;
 
 
-// Change site name in submit form
-function getValues() {
-    var firstNameField = document.getElementById("firstName");
-    var lastNameField = document.getElementById("lastName");
-
-    newOwner.firstName = firstNameField.value;
-    newOwner.lastName = lastNameField.value;
-
-    document.getElementById("newowner").innerHTML = newOwner.firstName + " " +newOwner.lastName;
- // change full name above  the profile image
-    document.getElementById("newowner2").innerHTML = newOwner.firstName + " " +newOwner.lastName;
-// change full name above  the profile image
-    document.getElementById("miss").innerHTML = newOwner.miss;
-};
 
 
 
