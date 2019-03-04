@@ -14,4 +14,12 @@ $(function(){
         $('table').addClass('table-dark');
     });
 
+        /// portfolio images add clip-me ///
+    $('.portDiv').on('mouseenter', function () {
+        $(this).addClass('clip-me');
+    });
+    $('.portDiv').on('mouseleave', function () {
+        $(this).removeClass('clip-me');
+    });
+
 });

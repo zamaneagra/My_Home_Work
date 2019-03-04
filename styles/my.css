@@ -175,3 +175,13 @@ input[type=submit]:hover {
 .modal-content{
         width: 600px;
 }
+
+.clip-me{
+    position: absolute;
+    clip: rect(10px, 350px, 257px, 10px);
+}
+
+.imgPortfolio {
+    width: 360px;
+    height: 267px;
+}
