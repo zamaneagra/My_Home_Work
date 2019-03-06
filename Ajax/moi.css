@@ -1,0 +1,25 @@
+.container{
+    margin-top: 100px;
+}
+.row{
+    background-color: lightsteelblue;
+    padding: 10px;
+}
+.listUsers{
+    font-weight: bold;
+    font-size: small;
+    color: darkred;
+    line-height: 0.5em;
+}
+.bg1{
+    background-color: lightblue;
+}.bg2{
+    background-color: lightgrey;
+}.bg3{
+    background-color: lightgreen;
+}
+.col{
+    border: 1px solid green;
+    min-height: 150px;
+}
+
