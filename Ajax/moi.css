@@ -5,16 +5,14 @@
     background-color: lightsteelblue;
     padding: 10px;
 }
-.listUsers{
-    font-weight: bold;
-    font-size: small;
+.user-list{
+    font-size: 12px;
     color: darkred;
-    line-height: 0.5em;
 }
 .bg1{
     background-color: lightblue;
 }.bg2{
-    background-color: lightgrey;
+    background-color: lightyellow;
 }.bg3{
     background-color: lightgreen;
 }
@@ -22,4 +20,13 @@
     border: 1px solid green;
     min-height: 150px;
 }
-
+.smallerText{
+    font-size: small;
+}
+.long{
+    width: 100%;
+}
+.userAdded{
+    color: #721c24;
+    font-weight: bold;
+}

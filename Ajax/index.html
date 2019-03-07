@@ -5,23 +5,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="moi.css">
 
-	<title>...</title>
+	<title>Ajax</title>
 </head>
 <body>
     <section>
         <div class="container">
             <div class="row">
                 <div class="col bg1 d-flex align-items-center">
-                    <div class="col-8">
-                        <div id="user-list" class="listUsers text-wrap bd-highlight p-2">
-                        </div>
+                    <div class="col-7">
+                            <ul id="user-list" class="font-weight-light user-list p-2" ></ul>
                     </div>
-                    <div class="col-4">
-                        <p>Get Users from DataBase</p>
-                        <button class="btn btn-sm btn-success" onclick="getUsers()">Get</button>
+                    <div class="col-5 ml-1 pl-1">
+                        <p class="text-left mr-2 mt-2 smallerText">Get users from external Data Base <a href="https://reqres.in" target="_blank">reqres.in</a> </p>
+                        <button class="btn btn-sm btn-success" onclick="getUsers()">Get users</button>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col bg2 d-flex align-items-center">
                     <div class="p-1">
                         <div class="form-container">
                             <label>First Name</label>
@@ -29,22 +28,25 @@
                             <label> Last Name </label>
                             <input type="text" id="lastName">
 
-                            <button onclick="saveUsers()">
-                                Save User
-                            </button>
+                            <button class="btn btn-sm btn-info mt-2 long" onclick="saveUsers()"> Add new user </button>
+
+                            <div id="confirmUserSaved" class="p-2 smallerText">
+                            </div>
+
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="p-1">
+                <div class="col bg3 d-flex align-items-start">
+                    <div class="p-2">
+
                         <input type="text" id="userId">
-                        <button onclick="getUser()">
+                        <button onclick="getUser()" class="btn btn-sm btn-warning">
                             Get User By Id
                         </button>
 
-                        <button onclick="updateUser()">
-                            UpdateUser
-                        </button>
+                        <div id="getUser" class="pt-3 ">
+                        </div>
+
                     </div>
                 </div>
             </div>

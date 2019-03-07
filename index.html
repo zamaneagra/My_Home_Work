@@ -305,6 +305,12 @@
     </div>
 
 <!-- Contact Us -->
+    <div class="container mt-5">
+        <button onclick="toggleForm()" class="btn btn-sm btn-warning">
+            Hide/Unhide
+        </button>
+    </div>
+
     <div class="container contact" id="contact">
         <hr>
         <div class="row">
@@ -318,12 +324,17 @@
                         <input type="text" id="name" name="name" placeholder="Your name">
                         <input type="text" id="email" name="email" placeholder="Your e-mail address">
                         <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
-                        <input type="submit" value="Submit">
+                        <div id="blog-read-text" >
+                            <input type="text" placeholder="How many blogs do you read?">
+                        </div>
+
+                        <input onclick="sendUserData()" type="submit" value="Submit">
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 
