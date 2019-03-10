@@ -63,7 +63,7 @@ $(function(){
 
     /// form hide - unhide //
     $('#blog-read-text').hide();
-    $('#contact').hide();
+    $('#contact').show();
     /// input form hide-unhide //
     numberOfBlogs = $('#blog .row') [0].childElementCount;
     console.log(numberOfBlogs);
@@ -71,4 +71,25 @@ $(function(){
         $('#blog-read-text').show();
     }
 
+});
+
+//////////////////////////////////////////
+// alert when cursor leave input area ///
+$( "#subject" ).blur(function() {
+    alert( "You should fill text form" );
+});
+//////////////////////////////////////////
+// alert when changes are  input area ///
+$( "#manyBlogs" ).change(function() {
+    alert( "You just changed number of blogs" );
+});
+///////////////////////
+// validation form ///
+$( "form" ).submit(function( event ) {
+    if ( $( "#name" ).val() === "Steve" ) {
+        $( "span" ).text( "Validated..." ).show();
+        return;
+    }
+    $( "span" ).text( "Not valid!" ).show().fadeOut( 2000 );
+    event.preventDefault();
 });

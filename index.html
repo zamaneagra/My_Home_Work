@@ -305,11 +305,7 @@
     </div>
 
 <!-- Contact Us -->
-    <div class="container mt-5">
-        <button onclick="toggleForm()" class="btn btn-sm btn-warning">
-            Hide/Unhide
-        </button>
-    </div>
+
 
     <div class="container contact" id="contact">
         <hr>
@@ -320,12 +316,13 @@
 
             <div class="col-sm-8">
                 <div class="container-form">
-                    <form action="#">
-                        <input type="text" id="name" name="name" placeholder="Your name">
+                    <form action="javascript:alert( 'success!' );">
+                        <input type="text" id="name" name="name" placeholder="To validate, write here the right name: 'Steve'">
+                        <span class="spanAlert"></span>
                         <input type="text" id="email" name="email" placeholder="Your e-mail address">
-                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+                        <textarea id="subject" name="subject" placeholder="This text area can't be blank. Using blur function" style="height:100px"></textarea>
                         <div id="blog-read-text" >
-                            <input type="text" placeholder="How many blogs do you read?">
+                            <input id="manyBlogs" type="text" placeholder="How many blogs do you read?">
                         </div>
 
                         <input onclick="sendUserData()" type="submit" value="Submit">
@@ -335,6 +332,11 @@
         </div>
     </div>
 
+    <div class="container mt-5">
+        <button onclick="toggleForm()" class="btn btn-sm btn-warning btn-large">
+            Hide/Unhide Contact us form
+        </button>
+    </div>
 
 
 
