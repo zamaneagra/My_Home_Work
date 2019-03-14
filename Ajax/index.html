@@ -32,7 +32,6 @@
 
                             <div id="confirmUserSaved" class="p-2 smallerText">
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -53,11 +52,43 @@
         </div>
     </section>
 
+    <section>
+        <div class="container mt-5 ">
+            <div class="row">
+                <div class="col">
+                    <div class="form-container">
+                        <h1>Loan calculator</h1>
+                            <div>
+                                <label>Loan amount, euros</label>
+                                <input class="d-block mb-3" type="number" id="loanAmount">
+                            </div>
+                            <div>
+                                <label>Loan term, months</label>
+                                <input id="loanTerm" class="d-block mb-3" type="number" required="required" pattern="([1-9]|1000000)" title="enter number from 1 to 1000000">
+                            </div>
+                            <div>
+                                <label>Interest rate per year, %</label>
+                                <input id="loanInterestRate" class="d-block mb-3" type="number" >
+                            </div>
+                        <button class="btn btn-sm btn-info mt-2" onclick="calculateLoan()"> <b>CALCULATE </b></button>
+                    </div>
+                </div>
+                <div class="col d-flex align-items-center">
+                    <p>You have to pay monthly: <span id="loanPerMonth" style="background-color: #f5e79e"></span> </p>
+                </div>
+                <div class="col smallerText grey">
+                    <img src="Loan%20Calculator.png" alt="" style="width: 360px">
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="myJavaScript.js"></script>
+    <script src="calculator.js"></script>
 </body>
 </html>
