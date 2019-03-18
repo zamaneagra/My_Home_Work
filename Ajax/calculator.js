@@ -28,8 +28,6 @@ function calculateLoan() {
 ////////////////////////////////////////////////////////////////
 /////////////// LOAN CALCULATOR SLIDER ////////////////////////
 
-    window.onload = getSliderLoan;
-
     var sliderLoan = document.getElementById("LoanRange");
     var outputLoan = document.getElementById("myLoanRange");
     outputLoan.innerHTML = sliderLoan.value;
@@ -47,44 +45,44 @@ function calculateLoan() {
     var sliderInterest = parseInt(document.getElementById("LoanInterest").value);
     var sliderComision = parseInt(document.getElementById("loanComision").value);
 
-    function getSliderLoan() {
-            // loan amount
-        var myLoanRange = parseInt(document.getElementById("LoanRange").value);
-            // loan term
-        var LoanMonthsRange = parseInt (document.getElementById("LoanMonthsRange").value);
-            // yearly interest
-        var LoanInterest = parseFloat (document.getElementById("LoanInterest").value);
-            // comision
-        var loanComision = parseFloat(document.getElementById("loanComision").value) / 100;
-        console.log(loanComision);
-            // monthly amount loan
-        var loanAmountPerMonth = myLoanRange / LoanMonthsRange;
-            // monthly amount comision
-        var loanComisionPerMonth = loanComision * myLoanRange;
-            // monthly interest
-        var loanInterestRatePerMonth = LoanInterest / 12 / 100;
-            // temporary variables
-        var a = myLoanRange * loanInterestRatePerMonth;
-        var b = 1 + loanInterestRatePerMonth;
-        var c = -LoanMonthsRange;
-        var d = Math.pow(b, c);
-            // monthly interest
-        var interestAmountPerMonth = (a/(1-d)) - (myLoanRange/LoanMonthsRange);
-            // monthly amount
-        var loanPerMonth = interestAmountPerMonth + loanAmountPerMonth + loanComisionPerMonth;
-        var interest = interestAmountPerMonth * LoanMonthsRange;
-        var comison = loanComision * myLoanRange * LoanMonthsRange;
-        var totalCost = comison + interest;
-        var total = comison + interest + myLoanRange;
-        document.getElementById("loanSliderPerMonth").innerHTML = loanPerMonth.toFixed(2) + ' Euros';
-        document.getElementById("interestLoan").innerHTML = interest.toFixed(2)  + ' Euros';
-        document.getElementById("comisionLoan").innerHTML = comison.toFixed(2) + ' Euros';
-        document.getElementById("cost").innerHTML = totalCost.toFixed(2) + ' Euros';
-        document.getElementById("total").innerHTML = total.toFixed(0) + ' Euros';
+function getSliderLoan() {
+        // loan amount
+    var myLoanRange = parseInt(document.getElementById("LoanRange").value);
+        // loan term
+    var LoanMonthsRange = parseInt (document.getElementById("LoanMonthsRange").value);
+        // yearly interest
+    var LoanInterest = parseFloat (document.getElementById("LoanInterest").value);
+        // comision
+    var loanComision = parseFloat(document.getElementById("loanComision").value) / 100;
+    console.log(loanComision);
+        // monthly amount loan
+    var loanAmountPerMonth = myLoanRange / LoanMonthsRange;
+        // monthly amount comision
+    var loanComisionPerMonth = loanComision * myLoanRange;
+        // monthly interest
+    var loanInterestRatePerMonth = LoanInterest / 12 / 100;
+        // temporary variables
+    var a = myLoanRange * loanInterestRatePerMonth;
+    var b = 1 + loanInterestRatePerMonth;
+    var c = -LoanMonthsRange;
+    var d = Math.pow(b, c);
+        // monthly interest
+    var interestAmountPerMonth = (a/(1-d)) - (myLoanRange/LoanMonthsRange);
+        // monthly amount
+    var loanPerMonth = interestAmountPerMonth + loanAmountPerMonth + loanComisionPerMonth;
+    var interest = interestAmountPerMonth * LoanMonthsRange;
+    var comison = loanComision * myLoanRange * LoanMonthsRange;
+    var totalCost = comison + interest;
+    var total = comison + interest + myLoanRange;
+    document.getElementById("loanSliderPerMonth").innerHTML = loanPerMonth.toFixed(2) + ' Euros';
+    document.getElementById("interestLoan").innerHTML = interest.toFixed(2)  + ' Euros';
+    document.getElementById("comisionLoan").innerHTML = comison.toFixed(2) + ' Euros';
+    document.getElementById("cost").innerHTML = totalCost.toFixed(2) + ' Euros';
+    document.getElementById("total").innerHTML = total.toFixed(0) + ' Euros';
 
-    }
+}
 
-
+window.onload = getSliderLoan;
 
 
 

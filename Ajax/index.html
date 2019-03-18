@@ -60,15 +60,15 @@
                         <h1>Loan calculator</h1>
                             <div>
                                 <label>Loan amount, euros</label>
-                                <input class="d-block mb-3" type="number" id="loanAmount" onchange="getSliderLoan()">
+                                <input class="d-block mb-3" type="number" id="loanAmount">
                             </div>
                             <div>
                                 <label>Loan term, months</label>
-                                <input id="loanTerm" class="d-block mb-3" type="number" required="required" pattern="([1-9]|1000000)" title="enter number from 1 to 1000000" onchange="getSliderLoan()">
+                                <input id="loanTerm" class="d-block mb-3" type="number" required="required" pattern="([1-9]|1000000)" title="enter number from 1 to 1000000">
                             </div>
                             <div>
                                 <label>Interest rate per year, %</label>
-                                <input id="loanInterestRate" class="d-block mb-3" type="number" onchange="getSliderLoan()">
+                                <input id="loanInterestRate" class="d-block mb-3" type="number">
                             </div>
                         <button class="btn btn-sm btn-info mt-2" onclick="calculateLoan()"> <b>CALCULATE </b></button>
                     </div>
@@ -86,24 +86,24 @@
                     <div class="p-5" style="width: 80%">
                         <div class="slidecontainer">
                             <label>Loan amount: <b><span id="myLoanRange"></span>  euros</b></label>
-                            <input type="range" min="1000" max="30000" step="1000" value="15000" class="slider" id="LoanRange">
+                            <input type="range" min="1000" max="30000" step="1000" value="15000" class="slider" id="LoanRange" onchange="getSliderLoan()">
                         </div>
                         <div class="slidecontainer">
                             <label>Loan term: <b><span id="myLoanMonthsRange"></span> months</b></label>
-                            <input type="range" min="1" max="24" value="12" step="1" class="slider" id="LoanMonthsRange">
+                            <input type="range" min="1" max="24" value="12" step="1" class="slider" id="LoanMonthsRange" onchange="getSliderLoan()">
 
                         </div>
                             <div class="d-flex align-content-between">
                                 <div class="p-2">
                                     <label>Interest rate per year, %</label>
-                                    <input min="0.1" max="1000" value="10" style="width: 70px; background-color: lightgrey" id="LoanInterest" class="d-block mb-3" type="number" required="required"  >
+                                    <input min="0.1" max="1000" value="10" style="width: 70px; background-color: lightgrey" id="LoanInterest" class="d-block mb-3" type="number" required="required" onchange="getSliderLoan()">
                                 </div>
                                 <div class="p-2">
                                     <label>Monthly comision, %</label>
-                                    <input min="0.01" max="1000" step="any" value="3.20" style="width: 70px; background-color: lightgrey" id="loanComision" class="d-block mb-3" type="number" required="required"  >
+                                    <input min="0.01" max="1000" step="any" value="3.20" style="width: 70px; background-color: lightgrey" id="loanComision" class="d-block mb-3" type="number" required="required" onchange="getSliderLoan()">
                                 </div>
                             </div>
-                        <button id="btnOnLoad" class="btn btn-sm btn-info mt-2" onclick="getSliderLoan()"> <b>CALCULATE </b></button>
+                        <button class="btn btn-sm btn-info mt-2" onclick="getSliderLoan()"> <b>CALCULATE </b></button>
 
                     </div>
 
