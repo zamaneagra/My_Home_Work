@@ -28,6 +28,8 @@ function calculateLoan() {
 ////////////////////////////////////////////////////////////////
 /////////////// LOAN CALCULATOR SLIDER ////////////////////////
 
+    window.onload = getSliderLoan;
+
     var sliderLoan = document.getElementById("LoanRange");
     var outputLoan = document.getElementById("myLoanRange");
     outputLoan.innerHTML = sliderLoan.value;
@@ -81,3 +83,12 @@ function calculateLoan() {
         document.getElementById("total").innerHTML = total.toFixed(0) + ' Euros';
 
     }
+
+
+
+
+
+
+
+
+

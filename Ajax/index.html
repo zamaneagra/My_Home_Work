@@ -60,15 +60,15 @@
                         <h1>Loan calculator</h1>
                             <div>
                                 <label>Loan amount, euros</label>
-                                <input class="d-block mb-3" type="number" id="loanAmount">
+                                <input class="d-block mb-3" type="number" id="loanAmount" onchange="getSliderLoan()">
                             </div>
                             <div>
                                 <label>Loan term, months</label>
-                                <input id="loanTerm" class="d-block mb-3" type="number" required="required" pattern="([1-9]|1000000)" title="enter number from 1 to 1000000">
+                                <input id="loanTerm" class="d-block mb-3" type="number" required="required" pattern="([1-9]|1000000)" title="enter number from 1 to 1000000" onchange="getSliderLoan()">
                             </div>
                             <div>
                                 <label>Interest rate per year, %</label>
-                                <input id="loanInterestRate" class="d-block mb-3" type="number">
+                                <input id="loanInterestRate" class="d-block mb-3" type="number" onchange="getSliderLoan()">
                             </div>
                         <button class="btn btn-sm btn-info mt-2" onclick="calculateLoan()"> <b>CALCULATE </b></button>
                     </div>
@@ -103,7 +103,7 @@
                                     <input min="0.01" max="1000" step="any" value="3.20" style="width: 70px; background-color: lightgrey" id="loanComision" class="d-block mb-3" type="number" required="required"  >
                                 </div>
                             </div>
-                        <button class="btn btn-sm btn-info mt-2" onclick="getSliderLoan()"> <b>CALCULATE </b></button>
+                        <button id="btnOnLoad" class="btn btn-sm btn-info mt-2" onclick="getSliderLoan()"> <b>CALCULATE </b></button>
 
                     </div>
 
