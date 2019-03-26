@@ -76,3 +76,86 @@ input[type=number]::-webkit-outer-spin-button {
     background: #4CAF50;
     cursor: pointer;
 }
+form input[type="text"] {
+    width: 90px;
+}
+#billamt {
+    font-size: 14px;
+    /*color: #2980b9;*/
+    color: #red;
+    background-color: #f7f7f7;
+    width: 60%;
+    padding: 5px 5px 8px 8px;
+}
+#billamt:focus {
+    background: #fff;
+    border: 3px solid #2980b9;
+    outline: none;
+}
+#peopleamt {
+    width: 60%;
+    padding: 5px 5px 8px 8px;
+    margin-left: 20px;
+    color: #red;
+    background-color: #f7f7f7;
+    font-size: 14px;
+}
+.dollarSign {
+    display: inline;
+}
+#serviceQual {
+    padding: 13px 13px 20px 20px;
+    margin-left: 20px;
+    font-size: 25px;
+}
+#totalTip {
+    font-size: 30px;
+    margin-top: 5px;
+    text-align: center;
+}
+#totalTip:before {
+    content: "Tip amount";
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
+}
+#totalTip sup {
+    font-size: 20px;
+    top: -18px;
+}
+#totalTip small {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}
+#containerCalculator {
+    height: 625px;
+    width: 420px;
+    margin: 100px auto;
+    background: #f7f7f7;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+}
+#calculate {
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    margin: 30px auto;
+    background: #AD133A;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    font-size: 17px;
+    color: white;
+}
+#calculate:hover {
+    background: #4c2827;
+    border-bottom-color: #111;
+}
+#calculate:active {
+    position: relative;
+    top: 1px;
+}
